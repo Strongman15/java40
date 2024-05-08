@@ -29,13 +29,14 @@ class Main {
         {
         case 1:
             {
-      System.out.println("Podaj imie studenta: ");
-      String name = reader.readLine();
-      System.out.println("Podaj wiek studenta: ");
-      int age = Integer.parseInt(reader.readLine());
-      s.addStudent(new Student(name, age));
-      System.out.println("Nowy student dodany");
-        break;}
+              System.out.println("Podaj imie studenta: ");
+              String name = reader.readLine();
+                System.out.println("Podaj nazwisko studenta: ");
+                String surname = reader.readLine();
+                System.out.println("Podaj wiek studenta: ");
+              int age = Integer.parseInt(reader.readLine());
+                s.addStudent(new Student(name, surname, age));
+              break;}
       case 2:
         {
         System.out.println("zły wybór");
@@ -47,7 +48,8 @@ class Main {
       case 3:
         {
       var students = s.getStudents();
-      for(Student current : students) {
+      for(Student current : students) 
+      {
         System.out.println(current.ToString());
        }
      break; }

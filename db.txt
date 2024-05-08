@@ -5,3 +5,4 @@ wik 2
 mati 5
 mat 3
 mat 34
+wik fis 2
