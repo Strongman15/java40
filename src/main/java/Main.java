@@ -18,9 +18,14 @@ class Main {
      Service s = new Service();
       BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
      
-      System.out.println("Podaj opcje: ");
-      int numer = Integer.parseInt(reader.readLine());
-      switch(numer)
+      
+      while(true)
+        {
+          System.out.println("Podaj opcje: ");
+          System.out.println("1-dodaj studenta, 2-zakoncz, 3-wypisz wszystkich studentow" );
+          int numer = Integer.parseInt(reader.readLine());
+       
+          switch(numer)
         {
         case 1:
             {
@@ -28,24 +33,26 @@ class Main {
       String name = reader.readLine();
       System.out.println("Podaj wiek studenta: ");
       int age = Integer.parseInt(reader.readLine());
-
       s.addStudent(new Student(name, age));
       System.out.println("Nowy student dodany");
         break;}
       case 2:
         {
         System.out.println("zły wybór");
-        
+        return;
         }
-    }
+    
       // s.addStudent(new Student("Krzysztof", 20));
      // s.addStudent(new Student("Janusz", 40));
-
+      case 3:
+        {
       var students = s.getStudents();
       for(Student current : students) {
         System.out.println(current.ToString());
-      }
-    } catch (IOException e) {
+       }
+     break; }
+    }
+    }} catch (IOException e) {
 
     }
   }
