@@ -12,10 +12,18 @@ import java.io.InputStreamReader;
 
 class Main {
   public static void main(String[] args) {
+     
     try {
+     
      Service s = new Service();
       BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+     
+      System.out.println("Podaj opcje: ");
+      int numer = Integer.parseInt(reader.readLine());
+      switch(numer)
+        {
+        case 1:
+            {
       System.out.println("Podaj imie studenta: ");
       String name = reader.readLine();
       System.out.println("Podaj wiek studenta: ");
@@ -23,7 +31,13 @@ class Main {
 
       s.addStudent(new Student(name, age));
       System.out.println("Nowy student dodany");
-      
+        break;}
+      case 2:
+        {
+        System.out.println("zły wybór");
+        
+        }
+    }
       // s.addStudent(new Student("Krzysztof", 20));
      // s.addStudent(new Student("Janusz", 40));
 
