@@ -35,7 +35,11 @@ class Main {
                 String surname = reader.readLine();
                 System.out.println("Podaj wiek studenta: ");
               int age = Integer.parseInt(reader.readLine());
-                s.addStudent(new Student(name, surname, age));
+              System.out.println("Podaj date urodzenia studenta: ");
+              String data =reader.readLine();
+              
+              
+              s.addStudent(new Student(name, surname, age, data));
               break;}
       case 2:
         {
@@ -53,6 +57,7 @@ class Main {
         System.out.println(current.ToString());
        }
      break; }
+            
     }
     }} catch (IOException e) {
 
